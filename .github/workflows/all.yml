@@ -12,11 +12,6 @@ jobs:
 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        zq_cookie: ${{ secrets.ZQ_COOKIE }}
-        zq_cookie2: ${{ secrets.ZQ_COOKIE2 }}
-        zq_cookie3: ${{ secrets.ZQ_COOKIE3 }}
-        zq_cookie4: ${{ secrets.ZQ_COOKIE4 }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 14.x
@@ -36,4 +31,4 @@ jobs:
           node Android-Чтосмотреть-məqalə.js
           node Android-Чтосмотреть-İrəli.js
         env:
-          zq_cookie: ${{ secrets.ZQ_COOKIE }}
+          zq_cookie: ${{ secrets.ZQ_COOKIE_N }}
