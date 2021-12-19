@@ -32,3 +32,4 @@ jobs:
           node Android-Чтосмотреть-İrəli.js
         env:
           zq_cookie: ${{ secrets.ZQ_COOKIE_Z }}
+          zq_withdraw: ${{ secrets.zq_withdraw_z }}
