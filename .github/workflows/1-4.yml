@@ -14,8 +14,6 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - uses: actions/checkout@v2
-        with:
-          ref: "dv"
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
