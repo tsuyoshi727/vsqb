@@ -1,8 +1,8 @@
-name: all_z
+name: 1-4
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 21,14,1 * * *
+    - cron: 0 0-18 * * *
   watch:
     types: started
   repository_dispatch:
