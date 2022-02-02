@@ -22,7 +22,6 @@ jobs:
         run: |
           npm install
       - name: '运行 【Android-Чтосмотреть-Dostum】'
-        if: env.zq_cookie
         run: |
           node zqkd.js
         env:
