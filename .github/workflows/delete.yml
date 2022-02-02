@@ -1,7 +1,21 @@
-- name: Delete workflow runs
-  uses: dmvict/clean-workflow-runs@v1.0.0
-  with:
-    token: ${{ secrets.PAT }}
-    repo: tsuyoshi727/vsqb
-    branch: master
-    save_period: 3
+name: 1-4
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 1 * * *
+  watch:
+    types: started
+  repository_dispatch:
+    types: bean_change
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+    - name: Delete workflow runs
+      uses: dmvict/clean-workflow-runs@v1.0.0
+      with:
+        token: ${{ secrets.PAT }}
+        repo: tsuyoshi727/vsqb
+        branch: master
+        save_period: 3
