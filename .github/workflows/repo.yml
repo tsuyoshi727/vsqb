@@ -2,7 +2,7 @@
 name: sync
 on:
   schedule:
-  - cron:  "7 * */2 * *"
+  - cron:  "7 0 */3 * *"
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:na
+      with:
         persist-credentials: false
     - name: repo-sync
       uses: repo-sync/github-sync@v2
